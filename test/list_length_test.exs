@@ -3,12 +3,15 @@ defmodule ListLengthTest do
 
   describe "call/1" do
     test "count list elements" do
+      # int
       list1 = [1, 2, 3, 4, 5, 6]
-      list2 = [1, 2]
-      list3 = [1, 2, 3, 4]
+      # float
+      list2 = [1.5, 2.7, 6.3]
+      # string
+      list3 = ["banana", "cenoura", "tomate", "abacaxi"]
 
       assert ListLength.call(list1) == 6
-      assert ListLength.call(list2) == 2
+      assert ListLength.call(list2) == 3
       assert ListLength.call(list3) == 4
     end
 
@@ -17,5 +20,11 @@ defmodule ListLengthTest do
 
       assert ListLength.call(list) == 0
     end
+
+    # test "has to fail" do
+    #  list = [1, 2, 3]
+    #
+    #  assert ListLength.call(list) == 2
+    # end
   end
 end
